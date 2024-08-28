@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
-    height: 40px;
+    height: 30px;
     margin-top: 0;
     margin: 0;
     border: 0.5px solid #ccc;
@@ -31,7 +31,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
-    height: 70px;
+    height: 50px;
 }
 
 td {
@@ -40,19 +40,16 @@ td {
 
 .barcode {
     width: 30%;
-    height: 70px;
+    height: 50px;
     border: 1px solid #ccc;
     padding: 0;
     margin: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    margin: none;
     background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
 }
 
 header {
@@ -72,13 +69,15 @@ table {
 }
 
 th, td {
-    padding: 10px;
+    padding: 5epx;
     border: 1px solid #ccc;
     vertical-align: top;
 }
 
 th {
     background-color: #f8f9fa;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .inner-table {
@@ -109,3 +108,13 @@ header {
 .repair-3 {
     display: flex;
 }
+
+@media print {
+
+    table { /* Or specify a table class */
+      max-height: 100%;
+      overflow: hidden;
+      page-break-after: avoid;
+    }
+  
+  }
